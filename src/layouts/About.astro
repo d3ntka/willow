@@ -1,0 +1,37 @@
+---
+import Card from '@cards/About.astro';
+import SectionHeading from '@components/headings/Section.astro';
+---
+<section>
+    <div class="container max-w-screen-lg my-40">
+        <SectionHeading classes='mb-18'>
+            We create world-class development and branding
+        </SectionHeading>
+        <udiv class="grid md:grid-cols-2 auto-rows-fr gap-18">
+            <Card
+                href="#"
+                icon="branding"
+                title="Branding"
+                body="A brand today is all about how it makes your customers feel."
+            />
+            <Card
+                href="#"
+                icon="development"
+                title="Development"
+                body="A brand today is all about how it makes your customers feel."
+            />
+            <Card
+                href="#"
+                icon="animation"
+                title="Animation"
+                body="A brand today is all about how it makes your customers feel."
+            />
+            <Card
+                href="#"
+                icon="ux"
+                title="User Experience"
+                body="A brand today is all about how it makes your customers feel."
+            />
+        </udiv>
+    </div>
+</section>

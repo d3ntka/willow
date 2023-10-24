@@ -1,0 +1,47 @@
+---
+import Card from "@cards/Article.astro";
+import SectionHeading from "@components/headings/Section.astro";
+import { Image } from "astro:assets";
+import article1 from "@img/article1.png";
+import article2 from "@img/article2.png";
+import article3 from "@img/article3.png";
+---
+
+<section class="my-40">
+  <div class="container max-w-screen-md">
+    <SectionHeading classes="mb-24" href="./" btnText="Latest Article">
+      Blog & Articles
+    </SectionHeading>
+  </div>
+  <div class="container max-w-screen py-6">
+    <div class="grid md:grid-cols-3 auto-rows-fr gap-10">
+      <Card
+        href="#"
+        title="Why Figma works best for modern teams"
+        category="Marketing"
+      >
+        <div slot="image">
+          <Image src={article1} alt="" />
+        </div>
+      </Card>
+      <Card
+        href="#"
+        title="How to deliver clients a design system"
+        category="Marketing"
+      >
+        <div slot="image">
+          <Image src={article2} alt="" />
+        </div>
+      </Card>
+      <Card
+        href="#"
+        title="Curating a workplace that inspires all of us"
+        category="Marketing"
+      >
+        <div slot="image">
+          <Image src={article3} alt="" />
+        </div>
+      </Card>
+    </div>
+  </div>
+</section>

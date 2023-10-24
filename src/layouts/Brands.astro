@@ -1,0 +1,18 @@
+---
+const brands = ["invoice2go", "tribal", "peng", "verox", "rpublica", "amplitude"];
+import { Icon } from "astro-icon";
+---
+
+<section>
+  <div class="container my-30">
+    <ul class="flex gap-10 flex-wrap items-center justify-center">
+      {
+        brands.map((brand) => (
+          <li class="h-20 w-45 svg:img-contain">
+            <Icon name={brand} />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

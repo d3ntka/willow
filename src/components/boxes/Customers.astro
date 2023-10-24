@@ -1,0 +1,23 @@
+---
+import { Icon } from "astro-icon";
+
+interface Props {
+    count: number;
+    text: string;
+    icon: string;
+ }
+
+ const { count, text, icon } = Astro.props;
+---
+
+<div class="bg-white shadow-customers flex items-center py-7 px-8 gap-6">
+    <Icon name={icon} class="w-14 h-14"/>
+    <div>
+        <div class="text-[2rem] leading-tight">
+            +{ count }
+        </div>
+        <div class="font-inter text-sm text-green-light leading-loose">
+            {text}
+        </div>
+    </div>
+</div>

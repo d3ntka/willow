@@ -1,0 +1,20 @@
+---
+import Logo from "../Logo.astro";
+const links = ["Home","Company","Services","Service Detail", "Contact"];
+---
+<footer>
+    <div class="container max-w-screen-xl py-12">
+        <div class="flex md:justify-between">
+            <Logo />
+            <div class="flex items-center gap-2">
+                {
+                    links.map((link)=>(
+                        <a href="./" class="py-2 px-4">
+                            {link}
+                        </a>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</footer>

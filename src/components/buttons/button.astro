@@ -1,0 +1,25 @@
+---
+interface Props {
+  href?: string;
+  classes?: string;
+  full?: boolean;
+}
+
+const { href, classes, full } = Astro.props;
+
+import { Icon } from "astro-icon";
+
+const colorClasses = full ? "bg-green-alt text-white hover:bg-white hover:text-green-alt" : "bg-white text-green hover:bg-green-alt hover:text-white text-green-alt";
+const Element = href ? 'a' : 'button';
+const elementClasses = `btn ${colorClasses} svg-current transition ${classes ?? ''}`; 
+---
+
+
+<Element href={href} class={elementClasses}>
+  <slot>
+    Learn More
+  </slot>
+    <Icon name="arrow" class="h-6 w-6 flex-shrink-0"/>
+</Element>
+
+

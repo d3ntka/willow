@@ -1,0 +1,30 @@
+---
+import { Icon } from "astro-icon";
+import Link from "@buttons/link.astro";
+interface Props {
+  title: string;
+  category: string;
+  href: string;
+}
+
+const { href, title, category } = Astro.props;
+---
+
+<a
+  href={href}
+  class="group bg-white border border-gray grid px-6 relative transition hover:shadow-lg"
+>
+  <div class="h-75 [&>*]:w-full [&>*]:h-full [&_img]:img-cover">
+    <slot name="image" />
+  </div>
+
+  <div class="grid gap-2 mt-6 pb-1.5">
+    <p class="text-2xs tracking-widest leading-[3] uppercase">
+      {category}
+    </p>
+    <h3 class="text-2xl tracking-wider ">
+      {title}
+    </h3>
+    <Link classes="" />
+  </div>
+</a>

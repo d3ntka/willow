@@ -1,0 +1,25 @@
+---
+interface Props {
+  href?: string;
+  classes?: string;
+
+}
+
+const { href, classes } = Astro.props;
+
+import { Icon } from "astro-icon";
+
+const Element = href ? 'a' : 'div';
+const elementClasses = `inline-flex items-center text-sm gap-4 svg-current transition ${classes ?? ''}`; 
+---
+
+
+<Element href={href} class={elementClasses}>
+  <slot>
+    Learn More
+  </slot>
+  <i class="h-6 w-6 transition group-hover:translate-x-3">
+      <Icon name="arrow" class=""/>
+  </i>
+</Element>
+

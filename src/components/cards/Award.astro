@@ -1,0 +1,37 @@
+---
+import { Icon } from "astro-icon";
+import Link from "@buttons/link.astro";
+
+interface Props {
+  title: string;
+  subtitle: string;
+  href: string;
+  icon: string;
+}
+
+const { href, title, subtitle, icon } = Astro.props;
+---
+
+<a
+  href={href}
+  class="group bg-white border border-gray min-h-92 px-10 pt-10 pb-11 grid gap-8 relative transition hover:shadow-lg"
+>
+  <div>
+    <i class="w-8 h-8 flex">
+      {icon && <Icon name={icon} class="img-contain" />}
+    </i>
+  </div>
+  <div class="border-b border-gray"></div>
+  <div>
+    <p class="text-green-light text-sm tracking-widest leading-[3] uppercase">
+      {subtitle}
+    </p>
+    <h3 class="text-2xl tracking-wider">
+      {title}
+    </h3>
+  </div>
+  <div class="border-b border-gray"></div>
+  <div>
+    <Link>View Project</Link>
+  </div>
+</a>

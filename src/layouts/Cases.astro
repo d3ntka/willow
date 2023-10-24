@@ -1,0 +1,58 @@
+---
+import Card from "@cards/Case.astro";
+import SectionHeading from "@components/headings/Section.astro";
+import { Image } from "astro:assets";
+import case1 from "@img/case1.png";
+import case2 from "@img/case2.png";
+import case3 from "@img/case3.png";
+import case4 from "@img/case4.png";
+---
+
+<section class="my-40">
+  <div class="container max-w-screen-md">
+    <SectionHeading classes="mb-18" href="./" btnText="Feature Project">
+      Check out some great case studies
+    </SectionHeading>
+    </div>
+    <div class="container max-w-screen-xl">
+      <div class="grid md:grid-cols-2 auto-rows-fr gap-10">
+        <Card
+          href="#"
+          title="PS-Alms"
+          body="Capturing workplace productivty in a series of candid photoshoots."
+        >
+          <div slot="background">
+            <Image src={case1} alt="" />
+          </div>
+        </Card>
+        <Card
+          href="#"
+          title="Almosty"
+          body="Capturing workplace productivty in a series of candid photoshoots."
+        >
+          <div slot="background">
+            <Image src={case2} alt="" />
+          </div>
+        </Card>
+        <Card
+          href="#"
+          title="Skin Care"
+          body="Capturing workplace productivty in a series of candid photoshoots."
+        >
+          <div slot="background">
+            <Image src={case3} alt="" />
+          </div>
+        </Card>
+        <Card
+          href="#"
+          title="Neauthy Skin Care"
+          body="Capturing workplace productivty in a series of candid photoshoots."
+        >
+          <div slot="background">
+            <Image src={case4} alt="" />
+          </div>
+        </Card>
+      </div>
+    </div>
+  </div>
+</section>

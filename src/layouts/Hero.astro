@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import hero from "@img/hero.png";
+import Button from "@buttons/button.astro";
+import Customers from "@components/boxes/Customers.astro";
+---
+
+<section>
+  <div class="container max-w-screen-xl mb-30">
+    <div class="grid md:grid-cols-2 gap-18">
+      <div class="pt-hero flex flex-col gap-2.5 max-w-100">
+        <div class="uppercase tracking-widest text-green-light leading-loose mt-7">
+          Welcome to Willow
+        </div>
+
+        <h1 class="mb-2.5">
+          Elevate <br />
+           your brand with Willow
+        </h1>
+
+        <p class="font-inter tracking-wide leading-loose text-2sm mb-6">
+          Unlimited design subscriptions to your business.
+        </p>
+
+        <Button href="./" full classes="mb-6">Get Started</Button>
+
+        <div class="mt-auto text-green-light text-sm">Design you'll 💛 guaranteed</div>
+      </div>
+
+      <div class="bg-tan pt-hero h-full relative">
+        <Image src={hero} alt="hero image" class="img-contain object-bottom" />
+        <div class="absolute bottom-0 left-0 md:-translate-x-19 -translate-y-12">
+          <Customers icon="sun-happy" count=480 text="Happy Customers"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

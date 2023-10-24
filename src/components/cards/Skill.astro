@@ -1,0 +1,23 @@
+---
+import { Icon } from "astro-icon";
+import Link from "@buttons/link.astro";
+
+interface Props {
+  title: string;
+  body: string;
+}
+
+const { title, body } = Astro.props;
+---
+
+<div
+  class=" border-t border-gray py-10 grid gap-1"
+>
+
+  <h3 class="text-[1.4375rem] tracking-wider">
+    {title}
+  </h3>
+  <p class="font-inter text-green-light text-sm tracking-widest leading-[3]">
+    {body}
+  </p>
+</div>

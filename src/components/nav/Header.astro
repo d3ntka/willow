@@ -1,0 +1,14 @@
+---
+import Logo from "@components/Logo.astro";
+const email = "hello@willow.co";
+---
+
+<nav class="absolute w-full top-0">
+  <div class="container">
+    <div class="flex items-center gap-4 px-3.5 py-8 ">
+      <Logo />
+      <div class="h-3.5 w-px bg-gray"></div>
+      <a href={email} class="text-green-light hover:text-dark">{email}</a>
+    </div>
+  </div> 
+</nav>
